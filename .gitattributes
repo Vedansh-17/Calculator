@@ -1,2 +1,30 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+import shelve 
+from coloroma import init, Force, Style
+
+init(autorest=True)
+
+def display_menu():
+    print("CALCULATOR")
+    print("____________")
+    print("1.ADDITION")
+    print("2.SUBSTRACT")
+    print("3.MULTIPLY")
+    print("4.DIVIDE")
+    print("5.HISTORY")
+    print("6.EXIT")
+    PRINT()
+def get_input():
+    while True:
+        try:
+            num=int(input("Choose the option"))
+            if 1<= num <=6: 
+                return num 
+            else:
+                print("Choose the valid option from 1 to 6")
+
+def ADDITION():
+    num1=float(input("Choose the 1st number"))
+    num2=float(input("Choose the 2nd number"))
+    result = num1+ num2
+    print(Fore.red + f"result: {num1:.2f} + {num2:.2f} = {result:.2f}")
+    return result
